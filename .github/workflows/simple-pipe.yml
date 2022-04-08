@@ -20,6 +20,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Print warning message
+      run: |
+        echo "::warning::This version is for debugging only."
+    - name: Dump context for runner
+      env:
+        RUNNER_CONTEXT: ${{ toJSON(runner) }}
+      run:
+        echo "::debug::Runner context is above."
+    
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
