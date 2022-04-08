@@ -48,7 +48,7 @@ jobs:
 
    steps:
    - id: report-count
-     uses: <your github userid>/arg-count-action@main
+     uses: tejasmaari/arg-count-action@main
      with:
        arguments-to-count: ${{ github.event.inputs.myValues }}
    - run: echo
